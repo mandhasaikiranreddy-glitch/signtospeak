@@ -70,8 +70,6 @@ Then open the URL shown in your terminal.
 - `script.js` — UI interactions + live demo logic (MediaPipe Hands)
 
 ## Links
-- GitHub Repository (original project):
-  - https://github.com/HarshithReddy123370/sign-language-to-human-language
 - Demo Video: Placeholder in UI
 - MVP Link: Placeholder in UI
 
@@ -88,3 +86,4 @@ To connect a real trained model (TensorFlow / TFJS / API):
 
 ## Disclaimer
 This project is for **academic/hackathon purposes** and showcases an **accessibility-focused AI solution concept**.
+
