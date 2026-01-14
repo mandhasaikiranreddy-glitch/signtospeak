@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Sign2Speak — Real-Time Sign Language to English Translator</title>
+    <meta
+      name="description"
+      content="Sign2Speak is a real-time sign language to English translation system using computer vision and deep learning."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-elevate>
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Sign2Speak Home">
+          <span class="brand-mark" aria-hidden="true">S2S</span>
+          <span class="brand-text">Sign2Speak</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+            <span class="sr-only">Open menu</span>
+            <span class="nav-toggle-icon" aria-hidden="true"></span>
+          </button>
+
+          <div id="navMenu" class="nav-menu" data-open="false">
+            <a href="#problem">Problem</a>
+            <a href="#solution">Solution</a>
+            <a href="#process">How it works</a>
+            <a href="#demo">Demo</a>
+            <a href="#tech">Tech</a>
+            <a href="#future">Future</a>
+            <a href="#team">Team</a>
+            <a class="nav-cta" href="#links">Links</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <p class="pill">
+              <span class="dot" aria-hidden="true"></span>
+              AI + Computer Vision Accessibility Demo
+            </p>
+
+            <h1 class="hero-title">Sign2Speak</h1>
+            <p class="hero-tagline">Breaking Communication Barriers with AI</p>
+            <p class="hero-desc">
+              A real-time sign language to English translation system using computer vision and deep learning.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#demo">View Demo</a>
+              <a
+                class="btn btn-secondary"
+                href="https://github.com/HarshithReddy123370/sign-language-to-human-language"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub Repository
+              </a>
+            </div>
+
+            <div class="hero-highlights" aria-label="Key highlights">
+              <div class="highlight">
+                <div class="highlight-title">Real-time</div>
+                <div class="highlight-sub">Low-latency gesture translation</div>
+              </div>
+              <div class="highlight">
+                <div class="highlight-title">Accessible</div>
+                <div class="highlight-sub">Clear UI + voice output</div>
+              </div>
+              <div class="highlight">
+                <div class="highlight-title">Vision + AI</div>
+                <div class="highlight-sub">Landmarks + deep learning</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card" data-reveal data-delay="120">
+            <div class="hero-card-top">
+              <div class="hero-card-title">Demo Preview</div>
+              <div class="hero-card-badge">Frontend mock</div>
+            </div>
+
+            <div class="mini-demo" role="img" aria-label="Mock demo showing webcam preview and detected text">
+              <div class="mini-cam" aria-hidden="true">
+                <div class="mini-cam-grid"></div>
+                <div class="mini-cam-label">Webcam</div>
+              </div>
+
+              <div class="mini-output">
+                <div class="mini-output-label">Detected Text</div>
+                <div class="mini-output-text">HELLO, HOW ARE YOU?</div>
+                <div class="mini-output-actions">
+                  <button class="icon-btn" type="button" data-tts>
+                    <span class="sr-only">Play voice output</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path
+                        d="M3 10v4a1 1 0 0 0 1 1h3l4 3V6L7 9H4a1 1 0 0 0-1 1Z"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16 9.5a3.5 3.5 0 0 1 0 5"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M18.5 7a7 7 0 0 1 0 10"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </button>
+                  <span class="mini-note" aria-hidden="true">Text-to-speech</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="hero-card-footnote">
+              This is a UI mock to demonstrate the user experience. No backend or model is required for this website.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-bg" aria-hidden="true"></div>
+      </section>
+
+      <section id="problem" class="section">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h2>Problem Statement</h2>
+            <p>
+              Many hearing-impaired individuals rely on sign language, yet real-time translation support is limited in
+              everyday digital communication.
+            </p>
+          </div>
+
+          <div class="grid-3" data-reveal data-delay="120">
+            <article class="card">
+              <h3>Communication gap</h3>
+              <p>
+                In public services, classrooms, and online spaces, sign language users often face barriers to quick,
+                natural conversations.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Video call limitations</h3>
+              <p>
+                Most video calling platforms do not provide native, real-time sign language interpretation support.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Interpreter dependency</h3>
+              <p>
+                Human interpreters are helpful but not always available, affordable, or practical for spontaneous
+                interactions.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="solution" class="section section-alt">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h2>Proposed Solution</h2>
+            <p>
+              Sign2Speak translates sign language gestures into English text and voice output using a computer-vision
+              pipeline.
+            </p>
+          </div>
+
+          <div class="split" data-reveal data-delay="120">
+            <div class="card">
+              <h3>How Sign2Speak works</h3>
+              <div class="checklist" role="list">
+                <div class="check" role="listitem">
+                  <span class="check-icon" aria-hidden="true"></span>
+                  <span>Webcam captures hand gestures in real-time.</span>
+                </div>
+                <div class="check" role="listitem">
+                  <span class="check-icon" aria-hidden="true"></span>
+                  <span>MediaPipe detects hand landmarks (key points).</span>
+                </div>
+                <div class="check" role="listitem">
+                  <span class="check-icon" aria-hidden="true"></span>
+                  <span>Deep learning model recognizes the sign/gesture.</span>
+                </div>
+                <div class="check" role="listitem">
+                  <span class="check-icon" aria-hidden="true"></span>
+                  <span>Output is converted into English text and speech.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card gradient-card" aria-label="Pipeline summary">
+              <div class="pipeline">
+                <div class="pipeline-node">
+                  <div class="pipeline-icon" aria-hidden="true">📷</div>
+                  <div>
+                    <div class="pipeline-title">Capture</div>
+                    <div class="pipeline-sub">Webcam frames</div>
+                  </div>
+                </div>
+                <div class="pipeline-line" aria-hidden="true"></div>
+                <div class="pipeline-node">
+                  <div class="pipeline-icon" aria-hidden="true">🖐️</div>
+                  <div>
+                    <div class="pipeline-title">Landmarks</div>
+                    <div class="pipeline-sub">MediaPipe</div>
+                  </div>
+                </div>
+                <div class="pipeline-line" aria-hidden="true"></div>
+                <div class="pipeline-node">
+                  <div class="pipeline-icon" aria-hidden="true">🧠</div>
+                  <div>
+                    <div class="pipeline-title">Recognize</div>
+                    <div class="pipeline-sub">Deep learning model</div>
+                  </div>
+                </div>
+                <div class="pipeline-line" aria-hidden="true"></div>
+                <div class="pipeline-node">
+                  <div class="pipeline-icon" aria-hidden="true">🔊</div>
+                  <div>
+                    <div class="pipeline-title">Output</div>
+                    <div class="pipeline-sub">Text + speech</div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="muted">
+                Designed for accessibility-focused demos and hackathon presentations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h2>How It Works (Process Flow)</h2>
+            <p>A simple flow from webcam input to English text and voice output.</p>
+          </div>
+
+          <div class="grid-5" data-reveal data-delay="120">
+            <article class="step-card">
+              <div class="step-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                  <path
+                    d="M9 5l-1-2h8l-1 2"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3>Step 1</h3>
+              <p>User turns on webcam</p>
+            </article>
+
+            <article class="step-card">
+              <div class="step-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 20c4.418 0 8-3.582 8-8 0-4.418-3.582-8-8-8-4.418 0-8 3.582-8 8 0 4.418 3.582 8 8 8Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                  <path
+                    d="M12 8v4l2.5 1.5"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3>Step 2</h3>
+              <p>Hand landmarks detected</p>
+            </article>
+
+            <article class="step-card">
+              <div class="step-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8 18V6m8 12V6"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M6 8h12M6 16h12"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3>Step 3</h3>
+              <p>Gesture recognized using AI model</p>
+            </article>
+
+            <article class="step-card">
+              <div class="step-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 6h16M4 12h10M4 18h14"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3>Step 4</h3>
+              <p>English text displayed</p>
+            </article>
+
+            <article class="step-card">
+              <div class="step-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M3 10v4a1 1 0 0 0 1 1h3l4 3V6L7 9H4a1 1 0 0 0-1 1Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16 9.5a3.5 3.5 0 0 1 0 5"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3>Step 5</h3>
+              <p>Voice output generated</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="demo" class="section section-alt">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h2>Live Demo (Working Preview)</h2>
+            <p>
+              Turn on your webcam to see real-time hand landmark detection and a lightweight gesture-to-text demo.
+            </p>
+          </div>
+
+          <div class="demo-grid" data-reveal data-delay="120">
+            <div class="demo-cam" aria-label="Webcam preview">
+              <div class="demo-cam-top">
+                <div class="demo-title">Webcam Preview</div>
+                <div class="demo-chip">MediaPipe Hands</div>
+              </div>
+              <div class="demo-cam-frame demo-live" data-live-frame>
+                <video id="webcam" class="demo-video" playsinline muted></video>
+                <canvas id="overlay" class="demo-overlay" aria-hidden="true"></canvas>
+                <div class="demo-cam-hint" data-live-hint>Click “Turn On Webcam” to start</div>
+                <div class="demo-status" aria-live="polite" data-live-status>Idle</div>
+              </div>
+              <div class="demo-cam-actions">
+                <button class="btn btn-secondary" type="button" data-demo-start>
+                  Turn On Webcam
+                </button>
+                <button class="btn btn-ghost" type="button" data-demo-stop disabled>
+                  Stop
+                </button>
+              </div>
+              <div class="demo-footnote muted" data-demo-note>
+                Works best on Chrome. If the camera doesn’t open, run this page on <strong>localhost</strong>.
+              </div>
+            </div>
+
+            <div class="demo-output" aria-label="Detected text and speech output">
+              <div class="demo-output-top">
+                <div>
+                  <div class="demo-title">Detected Text</div>
+                  <div class="demo-sub">Live output from the demo recognizer</div>
+                </div>
+                <button class="btn btn-primary" type="button" data-tts data-tts-source="#detectedText">
+                  <span class="btn-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M3 10v4a1 1 0 0 0 1 1h3l4 3V6L7 9H4a1 1 0 0 0-1 1Z"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16 9.5a3.5 3.5 0 0 1 0 5"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M18.5 7a7 7 0 0 1 0 10"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                  Speak
+                </button>
+              </div>
+
+              <div class="detected" id="detectedText" aria-live="polite">
+                READY
+              </div>
+
+              <div class="demo-output-bottom">
+                <div class="muted">
+                  Tip: For a full “AI model” version, replace the demo recognizer with your trained classifier.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tech" class="section">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h2>Technologies Used</h2>
+            <p>Core tools used for building the AI pipeline (represented here as a demo website).</p>
+          </div>
+
+          <div class="grid-4" data-reveal data-delay="120">
+            <article class="tech-card">
+              <div class="tech-icon" aria-hidden="true">🧩</div>
+              <h3>TensorFlow</h3>
+              <p>Model training and inference for gesture recognition.</p>
+            </article>
+            <article class="tech-card">
+              <div class="tech-icon" aria-hidden="true">🖐️</div>
+              <h3>MediaPipe</h3>
+              <p>Hand landmark detection for robust gesture features.</p>
+            </article>
+            <article class="tech-card">
+              <div class="tech-icon" aria-hidden="true">🌐</div>
+              <h3>Google Chrome</h3>
+              <p>Real-time demo environment for web-based interaction.</p>
+            </article>
+            <article class="tech-card">
+              <div class="tech-icon" aria-hidden="true">☁️</div>
+              <h3>Google Colab</h3>
+              <p>Notebook-based experimentation and model training.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="future" class="section section-alt">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h2>Future Scope</h2>
+            <p>Ideas to extend Sign2Speak beyond an MVP gesture-to-text demo.</p>
+          </div>
+
+          <div class="grid-2" data-reveal data-delay="120">
+            <article class="card">
+              <h3>Language and grammar improvements</h3>
+              <p>
+                Full sentence understanding and grammar support for ASL/ISL, including contextual translation.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Multi-language translation</h3>
+              <p>
+                Translate signs into multiple spoken/written languages for broader accessibility.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Mobile app integration</h3>
+              <p>
+                On-device translation for faster, offline-friendly communication.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Two-way communication</h3>
+              <p>
+                Convert speech/text to sign animation to support both directions of conversation.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Cloud-based scalability</h3>
+              <p>
+                Deploy as a scalable service for classrooms, meetings, and public platforms.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="section">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h2>Team</h2>
+            <p>Project team details for academic / hackathon presentation.</p>
+          </div>
+
+          <div class="team" data-reveal data-delay="120">
+            <div class="team-card">
+              <div class="team-avatar" aria-hidden="true">S2S</div>
+              <div class="team-meta">
+                <div class="team-name">Sign2Speak</div>
+                <div class="team-role">Team Name</div>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-avatar alt" aria-hidden="true">MK</div>
+              <div class="team-meta">
+                <div class="team-name">M. Sai Kiran Reddy</div>
+                <div class="team-role">Team Leader</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="links" class="section section-alt">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h2>Links</h2>
+            <p>Quick access to project resources.</p>
+          </div>
+
+          <div class="links" data-reveal data-delay="120">
+            <a
+              class="link-card"
+              href="https://github.com/HarshithReddy123370/sign-language-to-human-language"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div class="link-card-title">GitHub Repository</div>
+              <div class="link-card-sub">Source code and documentation</div>
+              <div class="link-card-action">Open</div>
+            </a>
+
+            <button class="link-card" type="button" data-toast="Demo video link will be added here.">
+              <div class="link-card-title">Demo Video</div>
+              <div class="link-card-sub">Placeholder button</div>
+              <div class="link-card-action">Coming soon</div>
+            </button>
+
+            <button class="link-card" type="button" data-toast="MVP link will be added here.">
+              <div class="link-card-title">MVP Link</div>
+              <div class="link-card-sub">Placeholder button</div>
+              <div class="link-card-action">Coming soon</div>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <div class="footer-brand">Sign2Speak</div>
+          <div class="footer-sub">Project for academic/hackathon purposes — accessibility-focused AI solution.</div>
+        </div>
+
+        <div class="footer-right">
+          <a href="#home">Back to top</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast-root>
+      <div class="toast-inner" data-toast-inner></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
